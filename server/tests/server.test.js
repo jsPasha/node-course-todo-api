@@ -190,7 +190,36 @@ const { todos, users, populateTodos, populateUsers } = require('./seed/seed');
 // 			.end(done)
 // 	});
 
-	// it('should return 401', (done) => {
+// it('should return 401', (done) => {
 
-	// })
+// })
+// });
+
+// describe('POST user/login', () => {
+// 	populateUsers();
+// 	it('shold login user and return auth token', (done) => {
+// 		request(app)
+// 			.post('/users/login')
+// 			.send({
+// 				email: users[1].email,
+// 				password: users[1].password
+// 			})
+// 			.expect((res) => {
+// 				expect(res.headers['x-auth']).toExist();
+// 			})
+// 		.end((err, res) => {
+// 			if (err) {
+// 				return done(err)
+// 			}
+
+// 			User.findById(users[1]._id).then((user) => {
+// 				expect(user.tokens[0]).toInclude({
+// 					access: 'auth',
+// 					toket: res.headers['x-auth']
+// 				})
+// 			}).catch((e) => {
+// 				done(e)
+// 			});
+// 		})
+// 	});
 // });
